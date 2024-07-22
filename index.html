@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get-Secure Passwords</title>
+    <script
+      src="https://kit.fontawesome.com/6a633e910e.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+        <h2>Powered by <a href="https://szswebdev.netlify.app/">SZSwebdev</a></h2>
+      <h3>Get-Secure Passwords</h3>
+      <div class="output-container">
+        <label for="display">Displayed Password</label>
+        <div class="icon-container">
+          <input type="text" id="display" disabled />
+          <span
+            ><i
+              class="fa-regular fa-clipboard fa-lg"
+              onclick="copyToClipboard()"
+            ></i
+          ></span>
+        </div>
+      </div>
+      <div class="input-container">
+        <input type="number" id="length" placeholder="Enter the length of the password" />
+      </div>
+      <div class="checkbox-container">
+        <div><input type="checkbox" id="uppercase" /><span>Upper Case Alphabets</span></div>
+        <div><input type="checkbox" id="lowercase" /><span>Lower Case Alphabets</span></div>
+        <div><input type="checkbox" id="numbers" /><span>Numbers</span></div>
+        <div><input type="checkbox" id="symbols" /><span>Symbols</span></div>
+      </div>
+      <button onclick="generatePassword()">Generate Password</button>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
